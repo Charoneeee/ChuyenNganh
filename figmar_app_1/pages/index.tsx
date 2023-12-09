@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {
-  Avatar,
+  ImageList,
   Typography,
-  Divider,
+  ImageListItem,
   List,
   ListItem,
   Grid,
@@ -13,6 +13,33 @@ import {
 } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const itemData = [
+  {
+    img: "Images/Rectangle1.jpg",
+    title: "Bed",
+  },
+  {
+    img: "Images/Rectangle4.png",
+    title: "Books",
+  },
+  {
+    img: "Images/Rectangle5.png",
+    title: "Sink",
+  },
+  {
+    img: "Images/Rectangle2.png",
+    title: "Kitchen",
+  },
+  {
+    img: "Images/Rectangle3.png",
+    title: "Blinds",
+  },
+  {
+    img: "Images/Rectangle6.png",
+    title: "Chairs",
+  },
+];
 
 export default function Home() {
   return (
@@ -132,11 +159,42 @@ export default function Home() {
               top: "978px",
               fontSize: "38px",
               fontFamily: "Inter, sans-serif",
-              backgroundColor: "black",
+              backgroundColor: "white",
+              color: "black",
             }}
           >
             Get a Quote
           </Button>
+        </Grid>
+        <Grid className="Portfolio">
+          <Typography
+            style={{
+              position: "absolute",
+              left: "597px",
+              top: "1292px",
+              fontSize: "81px",
+              fontFamily: "Playfair Display, serif",
+            }}
+          >
+            Portfolio
+          </Typography>
+          <ImageList
+            variant="masonry"
+            cols={2}
+            gap={100}
+            style={{ position: "absolute", top: "1472px", left: "145px" }}
+          >
+            {itemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
         </Grid>
       </main>
     </>
