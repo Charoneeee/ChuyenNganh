@@ -15,6 +15,7 @@ import {
   CardContent,
   CardMedia,
   TextField,
+  Link,
 } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -83,16 +84,24 @@ export default function Home() {
             }}
           >
             <Grid item xs={3}>
-              HOME
+              <Link underline="hover" color={"white"}>
+                HOME
+              </Link>
             </Grid>
             <Grid item xs={3}>
-              PORTFOLIO
+              <Link underline="hover" color={"white"}>
+                PORTFOLIO
+              </Link>
             </Grid>
             <Grid item xs={3}>
-              ABOUT
+              <Link underline="hover" color={"white"}>
+                ABOUT
+              </Link>
             </Grid>
             <Grid item xs={3}>
-              CONTACT
+              <Link underline="hover" color={"white"}>
+                CONTACT
+              </Link>
             </Grid>
           </Grid>
           <Typography
