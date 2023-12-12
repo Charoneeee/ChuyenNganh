@@ -5,7 +5,7 @@ type Props = {};
 
 const SectionContact = () => {
   return (
-    <Grid className="Contact">
+    <Grid className="Contact" sx={{ paddingBottom: "20px" }}>
       <Typography
         style={{
           position: "absolute",

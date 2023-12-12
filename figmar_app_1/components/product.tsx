@@ -46,11 +46,9 @@ const SectionProduct = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">
-                  <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                  </IconButton>
-                </Button>
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon />
+                </IconButton>
                 <Button size="small">Learn More</Button>
               </CardActions>
             </Card>
