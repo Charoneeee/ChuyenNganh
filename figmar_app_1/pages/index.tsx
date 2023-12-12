@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Typography, Grid, Button, TextField } from "@mui/material";
 import SectionHeader from "@/components/header";
 import SecttionPortfolio from "@/components/portfolio";
 import SectionAbout from "@/components/about";
 import SectionTestimonials from "@/components/testimonials";
 import SectionContact from "@/components/contact";
+import SectionProduct from "@/components/product";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +26,7 @@ export default function Home() {
         <SectionAbout />
         <SectionTestimonials />
         <SectionContact />
+        <SectionProduct />
       </main>
     </>
   );
