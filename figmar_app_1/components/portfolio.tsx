@@ -1,4 +1,4 @@
-import { Grid, Typography, ImageList, ImageListItem } from "@mui/material";
+import { Typography, ImageList, ImageListItem, Box } from "@mui/material";
 import React from "react";
 
 type Props = {};
@@ -32,7 +32,7 @@ const itemData = [
 
 const SecttionPortfolio = () => {
   return (
-    <Grid className="Portfolio">
+    <Box className="Portfolio">
       <Typography
         style={{
           position: "absolute",
@@ -61,7 +61,7 @@ const SecttionPortfolio = () => {
           </ImageListItem>
         ))}
       </ImageList>
-    </Grid>
+    </Box>
   );
 };
 

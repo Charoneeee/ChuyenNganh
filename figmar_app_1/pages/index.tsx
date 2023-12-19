@@ -23,10 +23,10 @@ export default function Home() {
       <main>
         <SectionHeader />
         <SecttionPortfolio />
-        <SectionAbout />
+        {/* <SectionAbout />
         <SectionTestimonials />
         <SectionContact />
-        <SectionProduct />
+        <SectionProduct /> */}
       </main>
     </>
   );
