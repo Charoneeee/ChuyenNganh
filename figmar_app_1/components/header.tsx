@@ -40,31 +40,23 @@ const SectionHeader = () => {
           </Stack>
         </Stack>
       </Box>
-      <Box>
-        <Typography
-          sx={{
-            padding: "50px",
-            paddingTop: "120px",
-            fontSize: "24px",
-            width: "650px",
-            fontFamily: "Inter, sans-serif",
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
-        </Typography>
-      </Box>
-      <Grid container spacing={2}>
-        <Grid xs={7.8} pt={"180px"}>
-          <Image
-            alt="HeaderLeft"
-            src="/HeaderLeft.png" // Update the path to your image
-            layout="fixed"
-            width={540}
-            height={570}
-          />
+      <Grid pt={"100px"} container spacing={2}>
+        <Grid xs={8}>
+          <Box>
+            <Typography
+              sx={{
+                padding: "60px",
+                fontSize: "24px",
+                width: "650px",
+                fontFamily: "Inter, sans-serif",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit.
+            </Typography>
+          </Box>
         </Grid>
-        <Grid xs={4.2}>
+        <Grid xs={4}>
           <Image
             alt="HeaderRight"
             src="/HeaderRight.jpg" // Update the path to your image
@@ -72,6 +64,28 @@ const SectionHeader = () => {
             width={520}
             height={530}
           />
+        </Grid>
+        <Grid xs={5.3}>
+          <Image
+            alt="HeaderLeft"
+            src="/HeaderLeft.png" // Update the path to your image
+            layout="fixed"
+            width={510}
+            height={540}
+          />
+        </Grid>
+        <Grid textAlign={"center"} xs={6.7}>
+          <Button
+            variant="contained"
+            style={{
+              fontSize: "38px",
+              fontFamily: "Inter, sans-serif",
+              backgroundColor: "white",
+              color: "black",
+            }}
+          >
+            Get a Quote
+          </Button>
         </Grid>
       </Grid>
       <Typography
@@ -98,20 +112,6 @@ const SectionHeader = () => {
       >
         Design
       </Typography>
-      <Button
-        variant="contained"
-        style={{
-          position: "absolute",
-          left: "770px",
-          top: "978px",
-          fontSize: "38px",
-          fontFamily: "Inter, sans-serif",
-          backgroundColor: "white",
-          color: "black",
-        }}
-      >
-        Get a Quote
-      </Button>
     </Box>
   );
 };
