@@ -5,7 +5,7 @@ type Props = {};
 
 const SectionHeader = () => {
   return (
-    <Box className="Header">
+    <Box pb={"100px"} className="Header">
       <Box p={"50px"}>
         <Stack direction="row" spacing={95}>
           <Typography
@@ -74,10 +74,10 @@ const SectionHeader = () => {
             height={540}
           />
         </Grid>
-        <Grid textAlign={"center"} xs={6.7}>
+        <Grid pt={"400px"} textAlign={"center"} xs={6.7}>
           <Button
             variant="contained"
-            style={{
+            sx={{
               fontSize: "38px",
               fontFamily: "Inter, sans-serif",
               backgroundColor: "white",
