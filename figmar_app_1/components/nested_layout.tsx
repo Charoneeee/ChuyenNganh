@@ -6,11 +6,5 @@ export default function NestedLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <Stack alignItems={"center"}>
-      <Box>Header của Nested Layout</Box>
-      {children}
-      <Box>Footer của Nested Layout</Box>
-    </Stack>
-  );
+  return <Stack alignItems={"center"}>{children}</Stack>;
 }
