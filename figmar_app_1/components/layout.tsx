@@ -1,52 +1,59 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  MenuItem,
+  Stack,
+  TextField,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import Link from "next/link";
+import { title } from "process";
 
+interface MenuItemObject {
+  title: string;
+  url: string;
+}
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // return (
-  //   <html lang="en">
-  //     <body>{children}</body>
-  //   </html>
-  // );
+  const menu: MenuItemObject[] = [
+    { title: "home", url: "/detail/home" },
+    { title: "about", url: "/detail/about/contact" },
+    { title: "portfolio", url: "/detail/portfolio" },
+  ];
+
+  const [currentMenu, setCurrentMenu] = useState(0);
+
   return (
     <main>
-      <Stack alignItems={"center"}>
-        <Box p={"50px"}>
-          <Stack direction="row" spacing={95}>
-            <Typography
-              style={{
-                fontWeight: "bolder",
-                fontSize: "20px",
-                fontFamily: "Inter, sans-serif",
-              }}
-            >
-              LOGO
-            </Typography>
-            <Stack
-              direction="row"
-              spacing={7}
-              sx={{
-                fontSize: "20px",
-                fontFamily: "Inter, sans-serif",
-              }}
-            >
-              <Link underline="hover" color={"white"}>
-                HOME
+      <AppBar>
+        <Toolbar>
+          <Typography sx={{ flexGrow: 1 }}>This header</Typography>
+          <Stack direction="row" gap={4}>
+            {menu.map((item, index) => (
+              <Link
+                key={item.url}
+                href={item.url}
+                style={{ color: `${currentMenu == index ? "red" : "gray"}` }}
+                onClick={() => setCurrentMenu(index)}
+              >
+                {item.title}
               </Link>
-              <Link underline="hover" color={"white"}>
-                PORTFOLIO
-              </Link>
-              <Link underline="hover" color={"white"}>
-                ABOUT
-              </Link>
-              <Link underline="hover" color={"white"}>
-                CONTACT
-              </Link>
-            </Stack>
+            ))}
           </Stack>
-        </Box>
-        {children}
-        <Box>This is footer</Box>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
+      <Stack p={2}>
+        <TextField variant="outlined" placeholder="Search" size="small" />
+        <Box>{children}</Box>
       </Stack>
+
+      <Toolbar />
+      {/* <AppBar position="fixed" sx={{ top: "auto", bottom: 0 }}>
+        <Toolbar>This footer</Toolbar>
+      </AppBar> */}
     </main>
   );
 }
