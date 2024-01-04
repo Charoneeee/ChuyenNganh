@@ -34,7 +34,7 @@ const HomeDetail: NextPageWithLayout = () => {
               width={150}
             />
             <Stack p={"20px"}>
-              <Box>{movie.title}</Box>
+              <Box fontSize={"30px"}>{movie.title}</Box>
               <Box>{movie.overview}</Box>
               <Button
                 onClick={() => handleButtonClick(movie.id)}

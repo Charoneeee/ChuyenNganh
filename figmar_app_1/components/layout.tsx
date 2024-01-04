@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </AppBar>
       <Toolbar />
       <Stack p={2}>
-        <TextField variant="outlined" placeholder="Search" size="small" />
+        {/* <TextField variant="outlined" placeholder="Search" size="small" /> */}
         <Box>{children}</Box>
       </Stack>
 
